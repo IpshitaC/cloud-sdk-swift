@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Getting items.
 - Getting item.
-- Getting modular content from response.
+- Getting linked items from response.
 - Getting taxonomies.
 - Getting taxonomy group.
 - Strongly typed mapping for all elements.
