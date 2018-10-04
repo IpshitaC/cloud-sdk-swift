@@ -226,13 +226,13 @@ client.getItem(modelType: Cafe.self, itemName: "boston") { (isSuccess, deliveryI
     }
 }
 ```
-### Getting modular content
-You can get modular content from `itemResponse` or `itemsResponse` object:
+### Getting linked items
+You can get linked items from `itemResponse` or `itemsResponse` object:
 ```swift
 let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID")
 client.getItem(modelType: Article.self, itemName: "on_roasts", completionHandler: { (isSuccess, itemResponse, error) in
 	if isSuccess {
-		let relatedArticle = itemResponse?.getModularContent(codename: "on_roasts", type: Article.self)
+		let relatedArticle = itemResponse?.getLinkedItems(codename: "on_roasts", type: Article.self)
 	}
 }
                             
