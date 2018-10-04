@@ -342,13 +342,13 @@ client.getItems(modelType: Coffee.self, queryParameters: coffeesQueryParameters)
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<h3 id='getting-modular-content' class='heading'>Getting modular content</h3>
+<h3 id='getting-linked-items' class='heading'>Getting linked items</h3>
 
-<p>You can get modular content from <code>itemResponse</code> or <code>itemsResponse</code> object:</p>
+<p>You can get linked items from <code>itemResponse</code> or <code>itemsResponse</code> object:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="kt">DeliveryClient</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">projectId</span><span class="p">:</span> <span class="s">"YOUR_PROJECT_ID"</span><span class="p">)</span>
 <span class="n">client</span><span class="o">.</span><span class="nf">getItem</span><span class="p">(</span><span class="nv">modelType</span><span class="p">:</span> <span class="kt">Article</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">itemName</span><span class="p">:</span> <span class="s">"on_roasts"</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">isSuccess</span><span class="p">,</span> <span class="n">itemResponse</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">isSuccess</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">relatedArticle</span> <span class="o">=</span> <span class="n">itemResponse</span><span class="p">?</span><span class="o">.</span><span class="nf">getModularContent</span><span class="p">(</span><span class="nv">codename</span><span class="p">:</span> <span class="s">"on_roasts"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Article</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">relatedArticle</span> <span class="o">=</span> <span class="n">itemResponse</span><span class="p">?</span><span class="o">.</span><span class="nf">getLinkedItems</span><span class="p">(</span><span class="nv">codename</span><span class="p">:</span> <span class="s">"on_roasts"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Article</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
