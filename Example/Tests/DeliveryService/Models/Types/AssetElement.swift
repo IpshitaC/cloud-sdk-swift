@@ -36,7 +36,7 @@ class AssetElementSpec: QuickSpec {
                                     let expectedAssetType = "image/jpeg"
                                     let expectedAssetSize = 121946
                                     let expecdtedAssetDescription = "Coffee Roastery"
-                                    let expectedAssetUrl = "https://assets.kenticocloud.com:443/b48c8305-a4f7-4889-a79f-49920e673a1e/f6daed1f-3f3b-4036-a9c7-9519359b9601/on-roasts-1080px.jpg"
+                                    let expectedAssetUrl = "https://assets-us-01.kc-usercontent.com:443/b48c8305-a4f7-4889-a79f-49920e673a1e/f6daed1f-3f3b-4036-a9c7-9519359b9601/on-roasts-1080px.jpg"
                                     
                                     let asset = teaserImage.value![0]
                                     

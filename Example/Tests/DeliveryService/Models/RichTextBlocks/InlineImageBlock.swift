@@ -53,7 +53,7 @@ class InlineImageBlockSpec: QuickSpec {
                                 }
                                 
                                 if let imageBlock = deliveryItem?.item?.bodyCopy?.inlineImages.first {
-                                    let expectedUrl = "https://assets.kenticocloud.com:443/b48c8305-a4f7-4889-a79f-49920e673a1e/83d110b2-3bff-4b4e-9070-f6b30e7802ea/coffee-cup-mug-cafe-small.jpg"
+                                    let expectedUrl = "https://assets-us-01.kc-usercontent.com:443/b48c8305-a4f7-4889-a79f-49920e673a1e/83d110b2-3bff-4b4e-9070-f6b30e7802ea/coffee-cup-mug-cafe-small.jpg"
                                     expect(imageBlock?.url) == expectedUrl
                                     done()
                                 }

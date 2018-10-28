@@ -1,20 +1,20 @@
 //
-//  GetItemPreview.swift
-//  KenticoCloud
+//  GetItemSecured.swift
+//  KenticoCloud_Tests
 //
-//  Created by Martin Makarsky on 21/09/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Created by Martin Makarsky on 18/10/2018.
+//  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import Quick
 import Nimble
 import KenticoCloud
 
-class GetItemPreviewSpec: QuickSpec {
+class GetItemSecuredSpec: QuickSpec {
     override func spec() {
-        describe("Get preview single item request") {
+        describe("Get single item request from secured project") {
             
-            let client = DeliveryClient.init(projectId: TestConstants.projectId, previewApiKey: TestConstants.previewApiKey)
+            let client = DeliveryClient.init(projectId: TestConstants.securedProjectId, secureApiKey: TestConstants.secureApiKey)
             
             //MARK: Custom Model mapping
             

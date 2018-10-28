@@ -1,6 +1,6 @@
 # Kentico Cloud Swift SDK
 
-[![Travis](https://img.shields.io/travis/Kentico/cloud-sdk-swift.svg)](https://travis-ci.org/Kentico/cloud-sdk-swift)
+[![Travis](https://travis-ci.org/Kentico/cloud-sdk-swift.svg?branch=master)](https://travis-ci.org/Kentico/cloud-sdk-swift)
 [![CocoaPods](https://img.shields.io/cocoapods/v/KenticoCloud.svg)](https://cocoapods.org/pods/KenticoCloud)
 [![CocoaPods](https://img.shields.io/cocoapods/p/KenticoCloud.svg)](https://cocoapods.org/pods/KenticoCloud)
 
@@ -56,9 +56,7 @@ let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID")
  ```
 **4. Prepare a query**
 ```swift
-let typeQueryParameter = QueryParameter.init(parameterKey: QueryParameterKey.type, parameterValue: "article")
-let languageQueryParameter = QueryParameter.init(parameterKey: QueryParameterKey.language, parameterValue: "es-ES")
-let articlesQueryParameters = [typeQueryParameter, languageQueryParameter]
+let articlesQueryParameters = QueryBuilder.params().type(article).language("es-ES")
  ```
 **5. Get and use content items**
 ```swift
@@ -79,7 +77,7 @@ client.getItems(modelType: Article.self, queryParameters: articleQueryParameters
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
@@ -121,14 +119,24 @@ Once you create a `DeliveryClient`, you can start querying your project reposito
 To retrieve unpublished content, you need to create a `DeliveryClient` with both Project ID and Preview API key. Each Kentico Cloud project has its own Preview API key. 
 
 ```swift
-// Note: Within a single project, we recommend that you work with only
-// either the production or preview Delivery API, not both.
 import KenticoCloud
 
-let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID")
+let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID", previewApiKey:"PREVIEW_API_KEY")
 ```
 
 For more details, see [Previewing unpublished content using the Delivery API](https://developer.kenticocloud.com/docs/preview-content-via-api).
+
+### Getting content from secured project
+
+To retrieve content from secured project, you need to create a `DeliveryClient` with both Project ID and Secure API key. 
+
+```swift
+import KenticoCloud
+
+let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID", secureApiKey:"SECURE_API_KEY")
+```
+
+For more details, see [Securing the Delivery API](https://developer.kenticocloud.com/reference#secure-access).
  
 ## Getting items
 
@@ -185,9 +193,7 @@ client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess,
  ```
  - using a query parameters array:
  ```swift
- let contentTypeQueryParameter = QueryParameter.init(parameterKey: QueryParameterKey.type, parameterValue: contentType)
-let languageQueryParameter = QueryParameter.init(parameterKey: QueryParameterKey.language, parameterValue: "es-ES")
-let coffeesQueryParameters = [contentTypeQueryParameter, languageQueryParameter]
+let coffeesQueryParameters = QueryBuilder.params().type(contentType).language("es-ES")
 client.getItems(modelType: Coffee.self, queryParameters: coffeesQueryParameters) { (isSuccess, itemsResponse, error) in ...
  ```
  
@@ -195,8 +201,7 @@ client.getItems(modelType: Coffee.self, queryParameters: coffeesQueryParameters)
  
  ```swift
  // Retrieves a list of all content items of certain type
-let contentTypeQueryParameter = QueryParameter.init(parameterKey: QueryParameterKey.type, parameterValue: "coffee")
-let coffeesQueryParameters = [contentTypeQueryParameter]
+let coffeesQueryParameters = QueryBuilder.params().type("coffee")
 client.getItems(modelType: Coffee.self, queryParameters: coffeesQueryParameters) { (isSuccess, itemsResponse, error) in
         if isSuccess {
             if let coffees = itemsResponse?.items {
@@ -227,7 +232,9 @@ client.getItem(modelType: Cafe.self, itemName: "boston") { (isSuccess, deliveryI
 }
 ```
 ### Getting linked items
-You can get linked items from `itemResponse` or `itemsResponse` object:
+
+You can get linekd content items from `itemResponse` or `itemsResponse` object:
+
 ```swift
 let client = DeliveryClient.init(projectId: "YOUR_PROJECT_ID")
 client.getItem(modelType: Article.self, itemName: "on_roasts", completionHandler: { (isSuccess, itemResponse, error) in

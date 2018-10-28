@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios, '10.0'
 
 target 'KenticoCloud_Example' do
   pod 'KenticoCloud', :path => '../'
@@ -7,8 +8,8 @@ target 'KenticoCloud_Example' do
   target 'KenticoCloud_Tests' do
     inherit! :search_paths
     pod 'KenticoCloud', :path => '../'
-    pod 'Quick', '~> 1.0.0'
-    pod 'Nimble', '~> 7.0.2'
+    pod 'Quick', '~> 1.3.2'
+    pod 'Nimble', '~> 7.3.1'
     
   end
 end

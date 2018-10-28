@@ -21,14 +21,15 @@ extension UIButton {
 extension UILabel {
     func styleWithRichtextString(richtextString: String) {
         do {
-            let attributedString = try NSMutableAttributedString(data: richtextString.data(using: String.Encoding.unicode, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil)
+            let attributedString = try NSMutableAttributedString(data: richtextString.data(using: String.Encoding.unicode, allowLossyConversion: true)!, options:[.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
+                documentAttributes: nil)
             
             
-            let fontSizeAttribute = [NSFontAttributeName : UIFont.systemFont(ofSize: 16.0)]
+            let fontSizeAttribute = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 16.0)]
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 1.5
-            let lineSpacingAttribute = [NSParagraphStyleAttributeName : paragraphStyle]
+            let lineSpacingAttribute = [NSAttributedStringKey.paragraphStyle : paragraphStyle]
             
             attributedString.addAttributes(fontSizeAttribute, range: NSMakeRange(0, attributedString.length))
             attributedString.addAttributes(lineSpacingAttribute, range: NSMakeRange(0, attributedString.length))

@@ -49,12 +49,6 @@ class CoffeeDetailViewController: UIViewController, UITableViewDataSource, UITab
         backButton.stylePinkButton()
         
         setContent()
-        
-        let client = TrackingClient.init(projectId: AppConstants.projectId, enableDebugLogging: true)
-        
-        if let categoryCodename = coffee.category?.value?[0].codename {
-            client.trackActivity(activityName: categoryCodename)
-        }
     }
     
     override func didReceiveMemoryWarning() {

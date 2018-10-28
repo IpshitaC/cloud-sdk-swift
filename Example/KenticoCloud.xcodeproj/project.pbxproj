@@ -24,15 +24,15 @@
 		8F1C85541F8E48090043807B /* ModularContentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85431F8E48090043807B /* ModularContentBlock.swift */; };
 		8F1C85551F8E48090043807B /* ArticleTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85461F8E48090043807B /* ArticleTestModel.swift */; };
 		8F1C85561F8E48090043807B /* CafeTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85471F8E48090043807B /* CafeTestModel.swift */; };
-		8F1C85571F8E48090043807B /* StartSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85491F8E48090043807B /* StartSession.swift */; };
-		8F1C85581F8E48090043807B /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C854A1F8E48090043807B /* Tracking.swift */; };
 		8F1C855A1F8E48620043807B /* AssetElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85591F8E48620043807B /* AssetElement.swift */; };
 		8F1C855C1F8E4BF90043807B /* DateTimeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C855B1F8E4BF90043807B /* DateTimeElement.swift */; };
 		8F1C855E1F8E4D860043807B /* ModularContentElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C855D1F8E4D860043807B /* ModularContentElement.swift */; };
 		8F1C85601F8E4F140043807B /* MultipleChoiceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C855F1F8E4F140043807B /* MultipleChoiceElement.swift */; };
 		8F1C85621F8E52600043807B /* NumberElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C85611F8E52600043807B /* NumberElement.swift */; };
+		8F23FF282178FC17003127B0 /* GetItemSecured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23FF272178FC17003127B0 /* GetItemSecured.swift */; };
 		8F2421051F90E17200C3C2E9 /* GetContentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2421041F90E17200C3C2E9 /* GetContentTypes.swift */; };
 		8F2421091F90F09F00C3C2E9 /* GetContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2421081F90F09F00C3C2E9 /* GetContentType.swift */; };
+		8F2F79C0217903DD0005A828 /* GetItemsSecured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F79BF217903DD0005A828 /* GetItemsSecured.swift */; };
 		8F3807301F6013C30008AFA1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38071B1F6013C30008AFA1 /* Article.swift */; };
 		8F3807311F6013C30008AFA1 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38071C1F6013C30008AFA1 /* Cafe.swift */; };
 		8F3807321F6013C30008AFA1 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38071D1F6013C30008AFA1 /* Coffee.swift */; };
@@ -74,7 +74,7 @@
 /* Begin PBXFileReference section */
 		334C30581096D57AF6202B29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3AB3626203000465A33AC941 /* Pods_KenticoCloud_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenticoCloud_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43E7CC258AA24C55207C538F /* KenticoCloud.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KenticoCloud.podspec; path = ../KenticoCloud.podspec; sourceTree = "<group>"; };
+		43E7CC258AA24C55207C538F /* KenticoCloud.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KenticoCloud.podspec; path = ../KenticoCloud.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* KenticoCloud_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenticoCloud_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,15 +95,15 @@
 		8F1C85431F8E48090043807B /* ModularContentBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularContentBlock.swift; sourceTree = "<group>"; };
 		8F1C85461F8E48090043807B /* ArticleTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTestModel.swift; sourceTree = "<group>"; };
 		8F1C85471F8E48090043807B /* CafeTestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeTestModel.swift; sourceTree = "<group>"; };
-		8F1C85491F8E48090043807B /* StartSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSession.swift; sourceTree = "<group>"; };
-		8F1C854A1F8E48090043807B /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		8F1C85591F8E48620043807B /* AssetElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetElement.swift; sourceTree = "<group>"; };
 		8F1C855B1F8E4BF90043807B /* DateTimeElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeElement.swift; sourceTree = "<group>"; };
 		8F1C855D1F8E4D860043807B /* ModularContentElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularContentElement.swift; sourceTree = "<group>"; };
 		8F1C855F1F8E4F140043807B /* MultipleChoiceElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceElement.swift; sourceTree = "<group>"; };
 		8F1C85611F8E52600043807B /* NumberElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberElement.swift; sourceTree = "<group>"; };
+		8F23FF272178FC17003127B0 /* GetItemSecured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemSecured.swift; sourceTree = "<group>"; };
 		8F2421041F90E17200C3C2E9 /* GetContentTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetContentTypes.swift; sourceTree = "<group>"; };
 		8F2421081F90F09F00C3C2E9 /* GetContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetContentType.swift; sourceTree = "<group>"; };
+		8F2F79BF217903DD0005A828 /* GetItemsSecured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemsSecured.swift; sourceTree = "<group>"; };
 		8F38071B1F6013C30008AFA1 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		8F38071C1F6013C30008AFA1 /* Cafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		8F38071D1F6013C30008AFA1 /* Coffee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				8F1C85361F8E48090043807B /* DeliveryService */,
-				8F1C85481F8E48090043807B /* TrackingService */,
 				8FB0AC7B1F73BA4700102112 /* TestConstants.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -274,8 +273,10 @@
 			children = (
 				8F1C85381F8E48090043807B /* GetItemLive.swift */,
 				8F1C85391F8E48090043807B /* GetItemPreview.swift */,
+				8F23FF272178FC17003127B0 /* GetItemSecured.swift */,
 				8F1C853A1F8E48090043807B /* GetItemsLive.swift */,
 				8F1C853B1F8E48090043807B /* GetItemsPreview.swift */,
+				8F2F79BF217903DD0005A828 /* GetItemsSecured.swift */,
 				8F1C853C1F8E48090043807B /* GetModularContent.swift */,
 				8F1C853D1F8E48090043807B /* GetTaxonomies.swift */,
 				8F1C853E1F8E48090043807B /* GetTaxonomyGroup.swift */,
@@ -328,15 +329,6 @@
 				8F1C85471F8E48090043807B /* CafeTestModel.swift */,
 			);
 			path = TestModels;
-			sourceTree = "<group>";
-		};
-		8F1C85481F8E48090043807B /* TrackingService */ = {
-			isa = PBXGroup;
-			children = (
-				8F1C85491F8E48090043807B /* StartSession.swift */,
-				8F1C854A1F8E48090043807B /* Tracking.swift */,
-			);
-			path = TrackingService;
 			sourceTree = "<group>";
 		};
 		8F38071A1F6013C30008AFA1 /* CloudModels */ = {
@@ -421,7 +413,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				E9F16864B5A3DD67EC2AE657 /* [CP] Embed Pods Frameworks */,
-				76248B7F0143A3FD2955F2DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -441,7 +432,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				0DD09E62D9C6354AB1EA8BEA /* [CP] Embed Pods Frameworks */,
-				AB8FB5B451F1A2C32EF56DDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -569,21 +559,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		76248B7F0143A3FD2955F2DC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KenticoCloud_Example/Pods-KenticoCloud_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		84836042E2C04754DAA292CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,21 +575,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB8FB5B451F1A2C32EF56DDC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KenticoCloud_Tests/Pods-KenticoCloud_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9F16864B5A3DD67EC2AE657 /* [CP] Embed Pods Frameworks */ = {
@@ -680,7 +640,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F1C85601F8E4F140043807B /* MultipleChoiceElement.swift in Sources */,
-				8F1C85581F8E48090043807B /* Tracking.swift in Sources */,
 				8F2421091F90F09F00C3C2E9 /* GetContentType.swift in Sources */,
 				8FB0AC7C1F73BA4700102112 /* TestConstants.swift in Sources */,
 				8F1C854B1F8E48090043807B /* GetItemLive.swift in Sources */,
@@ -689,7 +648,6 @@
 				8F1C854F1F8E48090043807B /* GetModularContent.swift in Sources */,
 				8FA7D8AF1F8E6FE20057C590 /* UrlSlugElement.swift in Sources */,
 				8F1C85531F8E48090043807B /* InlineImageBlock.swift in Sources */,
-				8F1C85571F8E48090043807B /* StartSession.swift in Sources */,
 				8FA7D8A91F8E64D80057C590 /* RichtextElement.swift in Sources */,
 				8F1C855E1F8E4D860043807B /* ModularContentElement.swift in Sources */,
 				8F1C855A1F8E48620043807B /* AssetElement.swift in Sources */,
@@ -704,7 +662,9 @@
 				8F2421051F90E17200C3C2E9 /* GetContentTypes.swift in Sources */,
 				8F1C85561F8E48090043807B /* CafeTestModel.swift in Sources */,
 				8F1C85551F8E48090043807B /* ArticleTestModel.swift in Sources */,
+				8F2F79C0217903DD0005A828 /* GetItemsSecured.swift in Sources */,
 				8F1C85501F8E48090043807B /* GetTaxonomies.swift in Sources */,
+				8F23FF282178FC17003127B0 /* GetItemSecured.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -809,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -834,7 +794,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "37a74a71-e1ab-4be2-a9c1-732d4a942a64";
 				PROVISIONING_PROFILE_SPECIFIER = "MartinM Provisioning profile";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -855,7 +815,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "656aeed4-0191-45d4-9039-07713c5072ae";
 				PROVISIONING_PROFILE_SPECIFIER = "MartinM Provisioning profile";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -875,7 +835,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -891,7 +851,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

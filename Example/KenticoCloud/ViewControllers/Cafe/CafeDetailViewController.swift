@@ -35,16 +35,6 @@ class CafeDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         backButton.stylePinkButton()
         SetContent()
-        
-        if let city = cafe?.city {
-            let trackingClient = TrackingClient.init(projectId: AppConstants.projectId, enableDebugLogging: true)
-            trackingClient.trackActivity(activityName: "ca_\(city)", completionHandler: {
-                (isSuccess, error) in
-                if !isSuccess {
-                    // Custom retry policy
-                }
-            })
-        }
     }
     
     override func didReceiveMemoryWarning() {

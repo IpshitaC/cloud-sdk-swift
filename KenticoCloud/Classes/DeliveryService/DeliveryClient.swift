@@ -14,22 +14,25 @@ import ObjectMapper
 public class DeliveryClient {
     
     private var projectId: String
-    private var apiKey: String?
+    private var previewApiKey: String?
+    private var secureApiKey: String?
     private var headers: HTTPHeaders?
     private var isDebugLoggingEnabled: Bool
     
     /**
      Inits delivery client instance.
-     Requests Preview API if apiKey is specified, otherwise requests Live API.
+     Requests Preview API if previewApiKey is specified, otherwise requests Live API.
      
      - Parameter projectId: Identifier of the project.
-     - Parameter apiKey: Preview API key for the project
+     - Parameter previewApiKey: Preview API key for the project.
+     - Parameter secureApiKey: Secure API key for the project.
      - Parameter enableDebugLogging: Flag for logging debug messages.
      - Returns: Instance of the DeliveryClient.
      */
-    public init(projectId: String, apiKey: String? = nil, enableDebugLogging: Bool = false) {
+    public init(projectId: String, previewApiKey: String? = nil, secureApiKey: String? = nil, enableDebugLogging: Bool = false) {
         self.projectId = projectId
-        self.apiKey = apiKey
+        self.previewApiKey = previewApiKey
+        self.secureApiKey = secureApiKey
         self.isDebugLoggingEnabled = enableDebugLogging
         self.headers = getHeaders()
     }
@@ -45,7 +48,7 @@ public class DeliveryClient {
      - Parameter items: Received items.
      - Parameter error: Potential error.
      */
-    public func getItems<T>(modelType: T.Type, queryParameters: [QueryParameter?], completionHandler: @escaping (_ isSuccess: Bool, _ items: ItemsResponse<T>?,_ error: Error?) -> ()) where T: Mappable {
+    public func getItems<T>(modelType: T.Type, queryParameters: [QueryParameter], completionHandler: @escaping (_ isSuccess: Bool, _ items: ItemsResponse<T>?,_ error: Error?) -> ()) where T: Mappable {
         
         let requestUrl = getItemsRequestUrl(queryParameters: queryParameters)
         sendGetItemsRequest(url: requestUrl, completionHandler: completionHandler)
@@ -285,7 +288,7 @@ public class DeliveryClient {
         }
     }
     
-    private func getItemsRequestUrl(queryParameters: [QueryParameter?]) -> String {
+    private func getItemsRequestUrl(queryParameters: [QueryParameter]) -> String {
         
         let endpoint = getEndpoint()
         
@@ -333,7 +336,7 @@ public class DeliveryClient {
         }
         
         // Remove last ampersand or question mark.
-        requestUrl = String(requestUrl.characters.dropLast(1))
+        requestUrl = String(requestUrl.dropLast(1))
         
         return requestUrl
     }
@@ -369,8 +372,8 @@ public class DeliveryClient {
             }
         }
         
-        // Request preview api in case there is an apiKey
-        if apiKey == nil {
+        // Request preview api in case there is an previewApiKey
+        if previewApiKey == nil {
             return CloudConstants.liveDeliverEndpoint
         } else {
             return CloudConstants.previewDeliverEndpoint
@@ -383,11 +386,15 @@ public class DeliveryClient {
             "Accept": "application/json"
         ]
         
-        if let apiKey = apiKey {
+        if let apiKey = previewApiKey {
             headers["authorization"] = "Bearer " + apiKey
         }
         
-        headers["X-KC-SDKID"] = "cocoapods.org;KenticoCloud;0.2.1"
+        if let apiKey = secureApiKey {
+            headers["authorization"] = "Bearer " + apiKey
+        }
+        
+        headers["X-KC-SDKID"] = "cocoapods.org;KenticoCloud;0.3.0"
         
         return headers
     }

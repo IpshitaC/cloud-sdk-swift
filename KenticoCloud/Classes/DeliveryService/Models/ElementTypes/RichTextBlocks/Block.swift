@@ -16,11 +16,12 @@ extension Block {
     
     func isKenticoCloudApplicationType(tag: String) -> Bool {
         let typeXpath = "//@type"
-        let tagDoc = HTML(html: tag, encoding: .utf8)
-        let type = tagDoc?.xpath(typeXpath).first?.content
-        
-        if type == "application/kenticocloud" {
-            return true
+        if let tagDoc = try? HTML(html: tag, encoding: .utf8) {
+            let type = tagDoc.xpath(typeXpath).first?.content
+            
+            if type == "application/kenticocloud" {
+                return true
+            }
         }
         
         return false

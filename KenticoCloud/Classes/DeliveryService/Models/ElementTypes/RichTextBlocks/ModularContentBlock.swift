@@ -30,11 +30,12 @@ public class ModularContentBlock: Block {
     
     private func isModularContent(objectTag: String) -> Bool {
         let dataTypeXpath = "//@data-type"
-        let figureTagDoc = HTML(html: objectTag, encoding: .utf8)
-        let dataType = figureTagDoc?.xpath(dataTypeXpath).first?.content
-        
-        if isKenticoCloudApplicationType(tag: objectTag) && dataType == "item" {
-            return true
+        if let figureTagDoc = try? HTML(html: objectTag, encoding: .utf8) {
+            let dataType = figureTagDoc.xpath(dataTypeXpath).first?.content
+            
+            if isKenticoCloudApplicationType(tag: objectTag) && dataType == "item" {
+                return true
+            }
         }
         
         return false
@@ -43,9 +44,10 @@ public class ModularContentBlock: Block {
     private func getModularContentName(objectTag: String?) -> String? {
         if let objectTag = objectTag {
             let codeNameXpath = "//@data-codename"
-            let objTagDoc = HTML(html: objectTag, encoding: .utf8)
-            let name = objTagDoc?.xpath(codeNameXpath).first?.content
-            return name
+            if let objTagDoc = try?  HTML(html: objectTag, encoding: .utf8) {
+                let name = objTagDoc.xpath(codeNameXpath).first?.content
+                return name
+            }
         }
         
         return nil

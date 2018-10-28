@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KenticoCloud'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'Swift SDK for Kentico Cloud'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Swift SDK for Kentico Cloud.
   s.source           = { :git => 'https://github.com/kentico/cloud-sdk-swift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/kenticocloud'
 
-  s.ios.deployment_target = '8.3'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
   s.watchos.deployment_target = '3.2'
   s.tvos.deployment_target = '9.0'
@@ -40,7 +40,7 @@ Swift SDK for Kentico Cloud.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'AlamofireObjectMapper', '~> 4.0'
-   s.dependency 'Kanna', '~> 2.2.0'
+   s.dependency 'AlamofireObjectMapper', '~> 5.1.0'
+   s.dependency 'Kanna', '~> 4.0.2'
    s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 end

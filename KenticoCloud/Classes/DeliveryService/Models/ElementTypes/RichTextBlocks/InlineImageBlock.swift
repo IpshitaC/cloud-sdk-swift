@@ -36,11 +36,12 @@ public class InlineImageBlock: Block {
     private func isInlineImageBlock(figureTag: String?) -> Bool {
         if let figureTag = figureTag {
             let assetXpath = "//figure/@data-asset-id"
-            let figureTagDoc = HTML(html: figureTag, encoding: .utf8)
-            let assetId = figureTagDoc?.xpath(assetXpath).first?.content
-            
-            if assetId != nil {
-                return true
+            if let figureTagDoc = try? HTML(html: figureTag, encoding: .utf8) {
+                let assetId = figureTagDoc.xpath(assetXpath).first?.content
+                
+                if assetId != nil {
+                    return true
+                }
             }
         }
         
@@ -50,8 +51,9 @@ public class InlineImageBlock: Block {
     private func getUrl(figureTag: String?) -> String? {
         if let figureTag = figureTag {
             let srcXpath = "//figure/img/@src"
-            let figureTagDoc = HTML(html: figureTag, encoding: .utf8)
-            return figureTagDoc?.xpath(srcXpath).first?.content
+            if let figureTagDoc = try? HTML(html: figureTag, encoding: .utf8) {
+                return figureTagDoc.xpath(srcXpath).first?.content
+            }
         }
         
         return nil
@@ -60,8 +62,9 @@ public class InlineImageBlock: Block {
     private func getDescription(figureTag: String?) -> String? {
         if let figureTag = figureTag {
             let descriptionXpath = "//figure/img/@alt"
-            let figureTagDoc = HTML(html: figureTag, encoding: .utf8)
-            return figureTagDoc?.xpath(descriptionXpath).first?.content
+            if let figureTagDoc = try? HTML(html: figureTag, encoding: .utf8) {
+                return figureTagDoc.xpath(descriptionXpath).first?.content
+            }
         }
 
         return nil
